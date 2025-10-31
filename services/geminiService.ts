@@ -204,11 +204,14 @@ Make every interaction count. Be intentional. Be real. Be you.`;
 let chat: Chat | null = null;
 
 const initializeChat = () => {
-  if (!process.env.API_KEY) {
-    console.error("API_KEY environment variable not set.");
-    throw new Error("API key is not configured.");
+  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  
+  if (!apiKey) {
+    console.error("VITE_GEMINI_API_KEY environment variable not set.");
+    throw new Error("API key is not configured. Please set VITE_GEMINI_API_KEY environment variable.");
   }
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  
+  const ai = new GoogleGenAI({ apiKey });
   chat = ai.chats.create({
     model: 'gemini-2.5-flash',
     config: {
@@ -231,6 +234,7 @@ export const getChatResponse = async (message: string): Promise<string> => {
     return response.text;
   } catch (error) {
     console.error("Gemini API error:", error);
+    chat = null;
     initializeChat();
     return "I seem to be having a technical issue. Please try asking again.";
   }
