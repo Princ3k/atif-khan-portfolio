@@ -1,0 +1,162 @@
+
+{
+  "personalInfo": {
+    "name": "Atif Khan",
+    "title": "Full Stack Software Engineer",
+    "email": "atifkhan308@icloud.com",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/atif-khan3/",
+      "instagram": "https://www.instagram.com/_atifkkhan/",
+      "github": "https://github.com/Princ3k"
+    },
+    "location": "Canada"
+  },
+  "education": {
+    "university": "University of Toronto",
+    "degree": "B.Sc. in Computer Science, Mathematics & Statistics",
+    "expectedGraduation": "2026",
+    "details": "Strong foundation in computer science fundamentals, mathematics, and statistics with focus on software engineering and full-stack development."
+  },
+  "experience": [
+    {
+      "company": "Criteo",
+      "role": "Full Stack Software Engineer Intern",
+      "duration": "May 2025 - Present",
+      "description": "Currently architecting a full-stack dataset generation platform",
+      "keyAchievements": [
+        "Architected and built a full-stack dataset generation platform using .NET 8, Angular, and AWS",
+        "Designed and deployed distributed microservices that improved system throughput by 70%",
+        "Increased system reliability and performance under high load conditions",
+        "Worked with modern cloud infrastructure and enterprise-scale systems"
+      ],
+      "technologies": [".NET 8", "Angular", "AWS", "Microservices"]
+    },
+    {
+      "company": "General Motors",
+      "role": "Software Test Engineer",
+      "duration": "Jan 2024 - Oct 2024",
+      "description": "Automated testing for ADAS (Super Cruise) features",
+      "keyAchievements": [
+        "Automated regression testing for Advanced Driver Assistance Systems (Super Cruise)",
+        "Reduced manual testing workload by 60%",
+        "Saved over 200 engineering hours per release cycle",
+        "Built Python telemetry pipelines for real-time vehicle sensor monitoring",
+        "Improved testing efficiency and code quality"
+      ],
+      "technologies": ["Python", "Automation", "Testing", "Telemetry"]
+    },
+    {
+      "company": "Intact Financial Corporation",
+      "role": "DevSecOps Intern",
+      "duration": "May 2023 - Jan 2024",
+      "description": "CI/CD pipeline maintenance and security automation",
+      "keyAchievements": [
+        "Engineered and maintained 26+ CI/CD pipelines using Jenkins and Terraform",
+        "Improved deployment reliability by 35%",
+        "Automated container scanning and vulnerability management",
+        "Reduced high-severity CVE exposure by 25%",
+        "Enhanced security compliance across infrastructure"
+      ],
+      "technologies": ["Jenkins", "Terraform", "CI/CD", "DevSecOps", "Infrastructure"]
+    }
+  ],
+  "featuredProject": {
+    "name": "Niyyah - AI-Powered Intentions Tracker",
+    "role": "Founder & Full Stack Developer",
+    "description": "A mobile app designed to help users set, track, and achieve daily intentions with AI guidance",
+    "website": "https://theniyyahapp.com",
+    "keyFeatures": [
+      "AI Spiritual Guide ('Ask Hikmah') - LLM-powered assistant",
+      "Daily intention tracking system",
+      "Map-based locator for community features",
+      "User authentication and data persistence",
+      "Real-time notifications"
+    ],
+    "technologies": ["React Native", "Node.js", "Supabase", "AWS Lambda", "Firebase"],
+    "impact": "500+ active users, positive community engagement, helping users connect intentions with daily actions"
+  },
+  "skills": {
+    "programming": {
+      "languages": ["Python", "C#", "JavaScript", "TypeScript", "SQL", "Bash"],
+      "frameworks": ["React", "Angular", "Node.js", ".NET Core", "Express", "React Native"],
+      "cloudServices": ["AWS", "GCP", "AWS Lambda", "EC2", "S3", "RDS"],
+      "devOpsTools": ["Terraform", "Docker", "Kubernetes", "Jenkins", "GitHub Actions"]
+    },
+    "soft": [
+      "Full-stack problem solving",
+      "System design and architecture",
+      "Cross-functional collaboration",
+      "Technical mentorship",
+      "Clear communication of complex concepts",
+      "Project ownership and initiative"
+    ]
+  },
+  "technicalExpertise": {
+    "backend": "Node.js, .NET Core, Express, RESTful APIs, microservices architecture, serverless computing",
+    "frontend": "React, Angular, TypeScript, responsive UI/UX design",
+    "database": "PostgreSQL, MySQL, Firebase, Supabase, data modeling",
+    "cloud": "AWS (EC2, Lambda, S3, RDS), GCP, serverless architecture",
+    "devops": "CI/CD pipelines, Docker containerization, infrastructure as code, monitoring"
+  },
+  "interests": {
+    "professional": [
+      "Full-stack system design",
+      "Scalable architecture",
+      "AI and machine learning applications",
+      "DevOps and cloud infrastructure",
+      "Performance optimization"
+    ],
+    "personal": [
+      "Travel and cultural exploration",
+      "Connecting with people from diverse backgrounds",
+      "Technology innovation",
+      "Building products that make a positive impact",
+      "Continuous learning and growth"
+    ]
+  },
+  "travelAndLifestyle": {
+    "philosophy": "Travel keeps me grounded and inspired. Each journey provides new perspectives and stories that influence how I build technology and connect with others.",
+    "benefits": [
+      "Gain global perspective on problem-solving",
+      "Build empathy and cultural awareness",
+      "Inspire creative thinking in engineering",
+      "Understand diverse user needs across markets",
+      "Network with talented people worldwide"
+    ]
+  },
+  "highlights": {
+    "achievements": [
+      "Built production apps used by 500+ users",
+      "Improved engineering efficiency by 70% through microservices",
+      "Saved teams 200+ hours per release cycle through automation",
+      "Managed 26+ critical CI/CD pipelines in enterprise environment",
+      "Reduced security vulnerabilities by 25% through automation"
+    ],
+    "uniqueStrengths": [
+      "End-to-end full-stack development capability",
+      "DevOps and infrastructure knowledge",
+      "Product thinking and user-centric development",
+      "Ability to work across frontend, backend, and infrastructure",
+      "Strong fundamentals in computer science and mathematics"
+    ]
+  },
+  "workingStyle": {
+    "approach": "Collaborative, detail-oriented, and proactive",
+    "values": [
+      "Clean, maintainable code",
+      "Thorough testing and quality assurance",
+      "Clear documentation",
+      "Mentoring junior developers",
+      "Taking ownership of projects",
+      "Continuous improvement"
+    ]
+  },
+  "careerGoals": [
+    "Build scalable systems that impact millions of users",
+    "Lead technical teams and mentor engineers",
+    "Contribute to open-source projects",
+    "Continue growing expertise in AI/ML applications",
+    "Explore entrepreneurship and product development"
+  ]
+}
+
