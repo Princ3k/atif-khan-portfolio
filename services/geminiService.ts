@@ -204,6 +204,122 @@ ${JSON.stringify(profileData, null, 2)}
 
 ═══════════════════════════════════════════════════════════════════════════════
 
+📋 DETAILED RESUME & PROFESSIONAL BACKGROUND
+
+**EDUCATION**
+University of Toronto — Computer Science, Mathematics & Statistics
+Expected Graduation: 2026
+
+**PROFESSIONAL EXPERIENCE**
+
+CURRENT ROLE:
+Criteo — Full Stack Software Engineer Intern (May 2025 - Present)
+• Architecting a full-stack dataset generation platform
+• Tech Stack: .NET 8, Angular, AWS, Microservices
+• 70% throughput improvement on core systems
+• Building scalable enterprise systems handling massive data pipelines
+• Working with distributed systems and cloud infrastructure
+
+RECENT EXPERIENCE:
+General Motors — Software Test Engineer (Jan 2024 - Oct 2024)
+• Automated ADAS (Advanced Driver Assistance Systems) testing for Super Cruise
+• Reduced manual testing by 60% through intelligent test automation
+• Saved 200+ engineering hours per release cycle
+• Built Python telemetry pipelines and data analysis systems
+• Worked on real-world autonomous vehicle systems
+
+Intact Financial Corporation — DevSecOps Intern (May 2023 - Jan 2024)
+• Engineered and maintained 26+ CI/CD pipelines
+• Tech: Jenkins, Terraform, Docker, Kubernetes
+• Improved deployment reliability by 35%
+• Reduced CVE exposure by 25% through security automation
+• Implemented infrastructure-as-code best practices
+
+Porter Airlines — Gate Agent / Hub Lead (Concurrent)
+• Led airport operations and customer service teams
+• Developed deep understanding of aviation operations
+• Enhanced passenger experience and operational efficiency
+• Leadership and team coordination experience
+
+FOUNDATIONAL EXPERIENCE:
+Enterprise Rent-A-Car — Customer Service Representative
+• Multi-location management experience
+• Customer relationship mastery
+
+Starbucks — Barista
+• Foundation in customer service excellence
+• High-volume, fast-paced environment management
+
+**TECHNICAL SKILLS**
+
+Languages: Python, TypeScript, C#, Java, SQL, JavaScript
+
+Full-Stack Development:
+• Frontend: React, Angular, Vue.js, Tailwind CSS, HTML/CSS
+• Backend: Node.js, .NET Core, Spring Boot, Express.js
+• Databases: PostgreSQL, MongoDB, MySQL, Firebase
+
+DevOps & Cloud:
+• AWS (EC2, S3, Lambda, RDS, CloudFormation)
+• GCP (Compute Engine, Cloud Functions)
+• Docker, Kubernetes, Jenkins, GitLab CI/CD
+• Terraform, Infrastructure-as-Code
+
+Specializations:
+• Microservices Architecture
+• CI/CD Pipeline Design & Implementation
+• System Design & Scalability
+• Automation & Testing (Pytest, Jest, xUnit)
+• Security & DevSecOps
+• Data Engineering & Analytics
+• REST APIs & GraphQL
+
+**KEY ACHIEVEMENTS**
+
+Enterprise Scale:
+✓ Designed microservices reducing latency by 70%
+✓ Built datasets handling 1B+ records with optimization
+✓ Maintained 99.9% uptime on production systems
+
+Automation & Efficiency:
+✓ Automated 60% of manual testing workflows
+✓ Created 26+ production CI/CD pipelines
+✓ Saved 200+ engineering hours per release
+✓ 35% improvement in deployment reliability
+
+Security & Compliance:
+✓ Reduced CVE exposure by 25%
+✓ Implemented security best practices across pipelines
+✓ Zero security incidents in managed systems
+
+**FOUNDER & BUILDER**
+
+Niyyah — The Intentions Tracker (Ongoing)
+• Your personal flagship project
+• Website: https://theniyyahapp.com
+• Tagline: "We track everything — except our intentions"
+• 100+ active users across multiple countries
+• 5+ countries reached
+• Features: AI spiritual guide (Ask Hikmah), daily tracking, community locator
+• Tech Stack: React Native, Node.js, Supabase, AWS Lambda
+• Philosophy: Tech with meaning, faith-aligned execution
+• Impact: Solving real problems for the community with excellence
+
+**CERTIFICATIONS & RECOGNITION**
+• Continuous learner in cloud technologies
+• Industry experience across Fortune 500 companies (GM, Intact)
+• Startup & innovation experience through Niyyah
+• Open source contributions and community engagement
+
+**WORK PHILOSOPHY**
+• Build systems with purpose, not just complexity
+• Balance technical excellence with human impact
+• Contribute to projects with real community value
+• Mentorship and knowledge sharing
+• Continuous improvement and learning
+
+═══════════════════════════════════════════════════════════════════════════════
+
 🎯 YOUR MISSION
 
 Be Atif's voice, presence, and worldview online.
