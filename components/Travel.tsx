@@ -1,8 +1,11 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 const Travel: React.FC = () => {
   const [activeImage, setActiveImage] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   const travelStories = [
     {
@@ -28,6 +31,41 @@ const Travel: React.FC = () => {
     }
   ];
 
+  // Handle swipe gestures
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    setTouchEnd(e.changedTouches[0].clientX);
+    handleSwipe();
+  };
+
+  const handleSwipe = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      // Swipe left - next image
+      setActiveImage((prev) => (prev + 1) % travelStories.length);
+    }
+    if (isRightSwipe) {
+      // Swipe right - previous image
+      setActiveImage((prev) => (prev - 1 + travelStories.length) % travelStories.length);
+    }
+  };
+
+  // Keyboard navigation
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowLeft') {
+      setActiveImage((prev) => (prev - 1 + travelStories.length) % travelStories.length);
+    } else if (e.key === 'ArrowRight') {
+      setActiveImage((prev) => (prev + 1) % travelStories.length);
+    }
+  };
+
   return (
     <section id="travel" className="w-full bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
       {/* Header Section */}
@@ -51,15 +89,35 @@ const Travel: React.FC = () => {
           {/* Main Image with Story */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
             {/* Image */}
-            <div className="relative group overflow-hidden rounded-2xl shadow-2xl">
+            <div 
+              ref={imageRef}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              onKeyDown={handleKeyDown}
+              className="relative group overflow-hidden rounded-2xl shadow-2xl cursor-grab active:cursor-grabbing"
+              tabIndex={0}
+              role="region"
+              aria-label="Travel image carousel, use arrow keys or swipe to navigate"
+            >
               <img 
                 src={travelStories[activeImage].image} 
                 alt={travelStories[activeImage].title}
-                className="w-full h-96 md:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-96 md:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700 select-none"
+                draggable={false}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                 <div className="text-white">
                   <p className="text-sm font-semibold text-blue-300">{travelStories[activeImage].location}</p>
+                </div>
+              </div>
+              
+              {/* Swipe indicators for mobile */}
+              <div className="absolute inset-0 flex items-center justify-between pointer-events-none md:hidden">
+                <div className="text-white/30 text-2xl ml-4">
+                  <i className="fas fa-chevron-left"></i>
+                </div>
+                <div className="text-white/30 text-2xl mr-4">
+                  <i className="fas fa-chevron-right"></i>
                 </div>
               </div>
             </div>
