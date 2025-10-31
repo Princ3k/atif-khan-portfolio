@@ -1,5 +1,5 @@
 
-import { GoogleGenAI, Chat } from "@google/genai";
+import { GoogleGenAI, Chat } from '@google/genai';
 import profileData from '../profile.json';
 
 const buildSystemInstruction = () => {
@@ -201,17 +201,22 @@ Remember: You're not just an AI. You're Atif's digital presence.
 Make every interaction count. Be intentional. Be real. Be you.`;
 };
 
+// Initialize API at module level
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+const isApiKeySet = !!apiKey;
+
+let ai: GoogleGenAI | null = null;
+
+if (isApiKeySet) {
+  ai = new GoogleGenAI({ apiKey });
+}
+
 let chat: Chat | null = null;
 
 const initializeChat = () => {
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-  
-  if (!apiKey) {
-    console.error("VITE_GEMINI_API_KEY environment variable not set.");
+  if (!ai) {
     throw new Error("API key is not configured. Please set VITE_GEMINI_API_KEY environment variable.");
   }
-  
-  const ai = new GoogleGenAI({ apiKey });
   chat = ai.chats.create({
     model: 'gemini-2.5-flash',
     config: {
@@ -221,21 +226,25 @@ const initializeChat = () => {
 };
 
 export const getChatResponse = async (message: string): Promise<string> => {
-  if (!chat) {
-    initializeChat();
-  }
-  
-  if (!chat) {
-    return "Chat initialization failed. Please check your API key configuration.";
-  }
-
   try {
+    if (!isApiKeySet) {
+      return "API key is not configured. Please check your environment variables.";
+    }
+
+    if (!chat) {
+      initializeChat();
+    }
+
+    if (!chat) {
+      return "Chat initialization failed. Please check your API key configuration.";
+    }
+
     const response = await chat.sendMessage({ message });
     return response.text;
   } catch (error) {
     console.error("Gemini API error:", error);
     chat = null;
-    initializeChat();
-    return "I seem to be having a technical issue. Please try asking again.";
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    return `I'm having trouble processing that right now. Error: ${errorMessage}. Please try again in a moment.`;
   }
 };
