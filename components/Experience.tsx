@@ -51,18 +51,18 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <section id="experience" className="relative bg-white dark:bg-gray-900 py-20 md:py-32 px-4 md:px-8 lg:px-16 overflow-hidden">
+    <section id="experience" className="relative bg-white dark:bg-gray-900 py-16 sm:py-20 md:py-32 px-4 sm:px-6 md:px-8 lg:px-16 overflow-hidden">
       {/* Background Accent */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-blue-50 dark:bg-blue-900/10 rounded-full blur-3xl opacity-30 -mr-48"></div>
-      <div className="absolute bottom-20 left-0 w-96 h-96 bg-indigo-50 dark:bg-indigo-900/10 rounded-full blur-3xl opacity-30 -ml-48"></div>
+      <div className="absolute top-20 right-0 w-80 sm:w-96 h-80 sm:h-96 bg-blue-50 dark:bg-blue-900/10 rounded-full blur-3xl opacity-30 -mr-40 sm:-mr-48"></div>
+      <div className="absolute bottom-20 left-0 w-80 sm:w-96 h-80 sm:h-96 bg-indigo-50 dark:bg-indigo-900/10 rounded-full blur-3xl opacity-30 -ml-40 sm:-ml-48"></div>
 
       <div className="relative max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16 md:mb-24">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-center mb-12 sm:mb-16 md:mb-24">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
             Professional Journey
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
+          <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400">
             From foundations to enterprise scale — building real impact at every step
           </p>
         </div>
@@ -73,7 +73,7 @@ const Experience: React.FC = () => {
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-green-500 to-orange-500 opacity-20"></div>
 
           {/* Experiences */}
-          <div className="space-y-12 md:space-y-16">
+          <div className="space-y-8 sm:space-y-12 md:space-y-16">
             {experiences.map((exp, index) => (
               <div key={exp.company} className={`relative ${index % 2 === 0 ? 'md:pr-1/2' : 'md:ml-1/2'}`}>
                 
@@ -87,48 +87,48 @@ const Experience: React.FC = () => {
                 <div className={`group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-700`}>
                   
                   {/* Gradient Header */}
-                  <div className={`h-1.5 bg-gradient-to-r ${exp.gradient}`}></div>
+                  <div className={`h-1 sm:h-1.5 bg-gradient-to-r ${exp.gradient}`}></div>
 
                   {/* Content */}
-                  <div className="p-8 md:p-10">
+                  <div className="p-4 sm:p-6 md:p-8 lg:p-10">
                     {/* Company & Logo */}
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="w-16 h-16 flex-shrink-0 bg-gray-100 dark:bg-gray-700 rounded-lg p-2 flex items-center justify-center overflow-hidden">
+                    <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
+                      <div className="w-12 sm:w-16 h-12 sm:h-16 flex-shrink-0 bg-gray-100 dark:bg-gray-700 rounded-lg p-2 flex items-center justify-center overflow-hidden">
                         <img src={exp.logo} alt={exp.company} className="w-full h-full object-contain dark:invert-[0.8] dark:brightness-200" />
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-1">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-0.5 sm:mb-1 break-words">
                           {exp.company}
                         </h3>
-                        <p className="text-sm md:text-base text-gray-500 dark:text-gray-400">{exp.duration}</p>
+                        <p className="text-xs sm:text-sm md:text-base text-gray-500 dark:text-gray-400">{exp.duration}</p>
                       </div>
                       {/* Position Badge */}
                       {exp.position === 'current' && (
-                        <div className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-semibold rounded-full flex items-center gap-1">
+                        <div className="px-2 sm:px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-semibold rounded-full flex items-center gap-1 flex-shrink-0">
                           <i className="fas fa-circle text-xs animate-pulse"></i>
-                          Current
+                          <span className="hidden sm:inline">Current</span>
                         </div>
                       )}
                     </div>
 
                     {/* Role & Description */}
-                    <div className="mb-6">
-                      <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    <div className="mb-4 sm:mb-6">
+                      <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">
                         {exp.role}
                       </h4>
-                      <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                      <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base leading-relaxed">
                         {exp.details}
                       </p>
                     </div>
 
                     {/* Key Metrics */}
-                    <div className="grid grid-cols-3 gap-4 py-6 border-t border-b border-gray-200 dark:border-gray-700">
+                    <div className="grid grid-cols-3 gap-2 sm:gap-4 py-4 sm:py-6 border-t border-b border-gray-200 dark:border-gray-700">
                       {exp.achievements.map((achievement, idx) => (
                         <div key={idx} className="text-center">
-                          <div className={`text-2xl md:text-3xl font-bold bg-gradient-to-r ${exp.gradient} bg-clip-text text-transparent mb-1`}>
+                          <div className={`text-lg sm:text-2xl md:text-3xl font-bold bg-gradient-to-r ${exp.gradient} bg-clip-text text-transparent mb-0.5 sm:mb-1`}>
                             {achievement.metric}
                           </div>
-                          <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 font-medium">
+                          <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 font-medium line-clamp-2">
                             {achievement.label}
                           </p>
                         </div>
@@ -136,40 +136,40 @@ const Experience: React.FC = () => {
                     </div>
 
                     {/* Technologies */}
-                    <div className="mt-6">
-                      <p className="text-xs font-semibold text-gray-500 dark:text-gray-500 uppercase tracking-wide mb-3">
+                    <div className="mt-4 sm:mt-6">
+                      <p className="text-xs font-semibold text-gray-500 dark:text-gray-500 uppercase tracking-wide mb-2 sm:mb-3">
                         Tech Stack
                       </p>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
                         {exp.role === "Full Stack Software Engineer Intern" && (
                           <>
-                            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-medium rounded-full">.NET 8</span>
-                            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-medium rounded-full">Angular</span>
-                            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-medium rounded-full">AWS</span>
-                            <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-medium rounded-full">Microservices</span>
+                            <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-medium rounded-full">.NET 8</span>
+                            <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-medium rounded-full">Angular</span>
+                            <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-medium rounded-full">AWS</span>
+                            <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-xs font-medium rounded-full">Microservices</span>
                           </>
                         )}
                         {exp.role === "Software Test Engineer" && (
                           <>
-                            <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-medium rounded-full">Python</span>
-                            <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-medium rounded-full">Automation</span>
-                            <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-medium rounded-full">Testing</span>
-                            <span className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-medium rounded-full">ADAS</span>
+                            <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-medium rounded-full">Python</span>
+                            <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-medium rounded-full">Automation</span>
+                            <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-medium rounded-full">Testing</span>
+                            <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-medium rounded-full">ADAS</span>
                           </>
                         )}
                         {exp.role === "DevSecOps Intern" && (
                           <>
-                            <span className="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-medium rounded-full">Jenkins</span>
-                            <span className="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-medium rounded-full">Terraform</span>
-                            <span className="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-medium rounded-full">CI/CD</span>
-                            <span className="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-medium rounded-full">Security</span>
+                            <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-medium rounded-full">Jenkins</span>
+                            <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-medium rounded-full">Terraform</span>
+                            <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-medium rounded-full">CI/CD</span>
+                            <span className="px-2 sm:px-3 py-0.5 sm:py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-medium rounded-full">Security</span>
                           </>
                         )}
                       </div>
                     </div>
 
                     {/* Hover Indicator */}
-                    <div className="mt-6 flex items-center text-blue-600 dark:text-blue-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="mt-4 sm:mt-6 flex items-center text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <span>Learn more</span>
                       <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </div>
@@ -181,14 +181,14 @@ const Experience: React.FC = () => {
         </div>
 
         {/* Growth Statement */}
-        <div className="mt-20 md:mt-28 p-8 md:p-12 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl border border-blue-200 dark:border-blue-800">
-          <div className="flex gap-4 items-start">
-            <i className="fas fa-chart-line text-2xl text-blue-600 dark:text-blue-400 mt-1 flex-shrink-0"></i>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+        <div className="mt-16 sm:mt-20 md:mt-28 p-4 sm:p-8 md:p-12 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl border border-blue-200 dark:border-blue-800">
+          <div className="flex gap-3 sm:gap-4 items-start">
+            <i className="fas fa-chart-line text-xl sm:text-2xl text-blue-600 dark:text-blue-400 mt-1 flex-shrink-0"></i>
+            <div className="min-w-0">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
                 From Foundations to Enterprise Scale
               </h3>
-              <p className="text-gray-700 dark:text-gray-300">
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                 Each role taught me something critical: <span className="font-semibold">customer service at Starbucks</span> taught empathy, 
                 <span className="font-semibold"> enterprise at Intact</span> taught systems thinking, 
                 <span className="font-semibold"> autonomy at GM</span> taught precision, and 

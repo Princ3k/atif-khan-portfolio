@@ -44,9 +44,9 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-      <main>
+      <main className="w-full">
         <Hero />
         <Skills />
         <Experience />
