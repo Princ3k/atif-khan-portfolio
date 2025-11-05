@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
       <div className="relative z-10 max-w-6xl mx-auto w-full">
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-center">
           {/* Left: Image - optimized for mobile */}
-          <div className="relative flex justify-center md:justify-start order-2 md:order-1">
+          <div className="relative flex justify-center md:justify-start order-1 md:order-2">
             <div className="relative w-full max-w-xs sm:max-w-sm aspect-square">
               {/* Glow effect */}
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl blur-2xl opacity-20"></div>
@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Right: Content - optimized for mobile */}
-          <div className="space-y-4 sm:space-y-5 order-1 md:order-2">
+          <div className="space-y-4 sm:space-y-5 order-2 md:order-1">
             {/* Greeting */}
             <div className="text-base sm:text-lg text-blue-400 font-semibold tracking-wide">
               👋 HEY, I'M
