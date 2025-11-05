@@ -31,10 +31,27 @@ const AnimatedAvatar: React.FC = () => {
   );
 };
 
+// Parse markdown formatting and return styled JSX
+const parseMarkdown = (text: string) => {
+  // Replace en-dashes with regular hyphens
+  let processedText = text.replace(/–/g, '-');
+  
+  // Split by ** to handle bold formatting
+  const parts = processedText.split(/\*\*(.*?)\*\*/);
+  
+  return parts.map((part, index) => {
+    // Odd indices are bold text (captured by the regex)
+    if (index % 2 === 1) {
+      return <strong key={index} className="font-semibold text-slate-50">{part}</strong>;
+    }
+    return <span key={index}>{part}</span>;
+  });
+};
+
 const Chatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { id: '1', text: "Hey there! 👋 I'm Atif's AI assistant. Ask me anything about my experience, skills, projects, or even my thoughts on faith, travel, and building with purpose. What's on your mind?", sender: 'ai' }
+    { id: '1', text: "Hey there! 👋 I'm Atif's Second Brain (Basically). Ask me anything about my experience, skills, projects, or even my thoughts on faith, travel, and building with purpose. What's on your mind?", sender: 'ai' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -112,12 +129,14 @@ const Chatbot: React.FC = () => {
                   <span className="text-white font-bold text-xs">AK</span>
                 </div>
               )}
-              <div className={`max-w-xs md:max-w-sm rounded-2xl px-4 py-2 text-sm leading-relaxed shadow-lg ${
+              <div className={`max-w-xs md:max-w-sm rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-lg ${
                 msg.sender === 'user' 
                   ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-br-sm' 
                   : 'bg-slate-700/80 text-slate-100 rounded-bl-sm border border-slate-600/50'
               }`}>
-                <p className="whitespace-pre-wrap break-words">{msg.text}</p>
+                <p className="whitespace-pre-wrap break-words">
+                  {msg.sender === 'ai' ? parseMarkdown(msg.text) : msg.text}
+                </p>
               </div>
             </div>
           ))}
