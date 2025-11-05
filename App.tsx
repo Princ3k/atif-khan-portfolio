@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
@@ -55,6 +56,7 @@ const App: React.FC = () => {
         <Contact />
       </main>
       <Chatbot />
+      <Analytics />
     </div>
   );
 };
