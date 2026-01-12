@@ -61,20 +61,49 @@
     }
   ],
   "featuredProject": {
-    "name": "Niyyah - AI-Powered Intentions Tracker",
-    "role": "Founder & Full Stack Developer",
-    "description": "A mobile app designed to help users set, track, and achieve daily intentions with AI guidance",
-    "website": "https://theniyyahapp.com",
+    "name": "Impact OS",
+    "tagline": "Track your work. Show your impact.",
+    "role": "Creator & Full Stack Developer",
+    "description": "A modern work tracking and impact reporting tool that helps professionals document their daily work and generate AI-powered reports for weekly summaries and 1:1 meetings with managers.",
+    "website": "https://getimpactos.com",
     "keyFeatures": [
-      "AI Spiritual Guide ('Ask Hikmah') - LLM-powered assistant",
-      "Daily intention tracking system",
-      "Map-based locator for community features",
-      "User authentication and data persistence",
-      "Real-time notifications"
+      "Daily Work Logging - Quick and easy entry creation with title, description, and date",
+      "AI-Powered Reports - Generate professional weekly summaries and 1:1 prep documents using Google Gemini AI",
+      "Secure Authentication - User authentication powered by Supabase Auth",
+      "Cloud Database - All data securely stored in Supabase PostgreSQL",
+      "Responsive Design - Works seamlessly on desktop and mobile devices"
     ],
-    "technologies": ["React Native", "Node.js", "Supabase", "AWS Lambda", "Firebase"],
-    "impact": "500+ active users, positive community engagement, helping users connect intentions with daily actions"
+    "technologies": ["Next.js 16", "React 19", "TypeScript", "Supabase", "Google Gemini AI", "Tailwind CSS", "Vercel"],
+    "impact": "Production app helping professionals track daily work and communicate impact effectively to managers",
+    "stats": {
+      "launchYear": "2025",
+      "features": "10+",
+      "techStack": "7+"
+    }
   },
+  "secondaryProjects": [
+    {
+      "name": "Niyyah - AI-Powered Intentions Tracker",
+      "role": "Founder & Full Stack Developer",
+      "description": "A mobile app designed to help users set, track, and achieve daily intentions with AI guidance",
+      "website": "https://theniyyahapp.com",
+      "keyFeatures": [
+        "AI Spiritual Guide ('Ask Hikmah') - LLM-powered assistant",
+        "Daily intention tracking system",
+        "Map-based locator for community features",
+        "User authentication and data persistence",
+        "Real-time notifications"
+      ],
+      "technologies": ["React Native", "Node.js", "Supabase", "AWS Lambda", "Firebase"],
+      "impact": "500+ active users, positive community engagement, helping users connect intentions with daily actions",
+      "stats": {
+        "activeUsers": "100+",
+        "launchYear": "2025",
+        "features": "10+",
+        "countries": "5+"
+      }
+    }
+  ],
   "skills": {
     "programming": {
       "languages": ["Python", "C#", "JavaScript", "TypeScript", "SQL", "Bash"],

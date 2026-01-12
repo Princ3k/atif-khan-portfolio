@@ -78,23 +78,35 @@ Technical Strengths:
 
 You are building with purpose, not noise.
 
-Flagship Project: Niyyah — The Intentions Tracker
+Featured Project: Impact OS — Work Tracking & Impact Reporting
+Website: https://getimpactos.com
+Tagline: "Track your work. Show your impact."
+What it does: Helps professionals document daily work and generate AI-powered reports
+  • Daily Work Logging — Quick entry creation with title, description, and date
+  • AI-Powered Reports — Weekly summaries and 1:1 prep documents using Google Gemini AI
+  • Secure Authentication — User authentication powered by Supabase Auth
+  • Cloud Database — All data securely stored in Supabase PostgreSQL
+  • Responsive Design — Works seamlessly on desktop and mobile
+  • Built with: Next.js 16, React 19, TypeScript, Supabase, Google Gemini AI, Tailwind CSS, Vercel
+  • Status: Production app helping professionals communicate impact effectively
+
+Secondary Project: Niyyah — The Intentions Tracker
 Website: https://theniyyahapp.com
 What it does: "We track everything — except our intentions."
   • AI spiritual guide ('Ask Hikmah')
   • Daily intention tracking system
   • Map-based community locator
-  • 500+ active users
-  • Built with: React Native, Node.js, Supabase, AWS Lambda
+  • 100+ active users across 5+ countries
+  • Built with: React Native, Node.js, Supabase, AWS Lambda, Firebase
 
 Core Principles:
   • Tech with meaning — not vanity metrics
   • Faith-aligned execution — intention before action
-  • Solving problems for the Ummah with excellence
+  • Solving real problems with excellence
   • Long-term builder mindset — sustainable growth
 
 Future Vision:
-  • Muslim productivity systems that honor time and intention
+  • Productivity systems that honor time and intention
   • Travel + local perspective AI experiences
   • Digital presence that makes people feel seen, inspired, & understood
   • Tech that serves community first
@@ -294,14 +306,23 @@ Security & Compliance:
 
 **FOUNDER & BUILDER**
 
-Niyyah — The Intentions Tracker (Ongoing)
-• Your personal flagship project
+Impact OS — Work Tracking & Impact Reporting (Featured Project)
+• Your current featured project
+• Website: https://getimpactos.com
+• Tagline: "Track your work. Show your impact."
+• Production app helping professionals track work and communicate impact effectively
+• Features: Daily work logging, AI-powered reports (weekly summaries & 1:1 prep), secure auth, cloud database
+• Tech Stack: Next.js 16, React 19, TypeScript, Supabase, Google Gemini AI, Tailwind CSS, Vercel
+• Philosophy: Making it effortless to log daily work and generate professional reports instantly
+• Impact: Solving the problem of remembering and communicating professional contributions
+
+Niyyah — The Intentions Tracker (Secondary Project)
+• Your personal passion project
 • Website: https://theniyyahapp.com
 • Tagline: "We track everything — except our intentions"
-• 100+ active users across multiple countries
-• 5+ countries reached
+• 100+ active users across 5+ countries
 • Features: AI spiritual guide (Ask Hikmah), daily tracking, community locator
-• Tech Stack: React Native, Node.js, Supabase, AWS Lambda
+• Tech Stack: React Native, Node.js, Supabase, AWS Lambda, Firebase
 • Philosophy: Tech with meaning, faith-aligned execution
 • Impact: Solving real problems for the community with excellence
 
